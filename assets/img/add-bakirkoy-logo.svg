@@ -1,0 +1,18 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badge" x1="36" y1="26" x2="178" y2="198" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D91F26"/>
+      <stop offset="1" stop-color="#9E1117"/>
+    </linearGradient>
+  </defs>
+  <circle cx="110" cy="110" r="102" fill="white" stroke="#D91F26" stroke-width="8"/>
+  <circle cx="110" cy="110" r="84" fill="url(#badge)"/>
+  <circle cx="110" cy="110" r="70" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+  <path d="M118 67C105 67 94.5 77.5 94.5 90.5C94.5 103.6 105 114 118 114C121.8 114 125.4 113.1 128.7 111.3C124.1 117.2 116.9 121 108.8 121C94.9 121 83.5 109.7 83.5 95.7C83.5 81.7 94.9 70.4 108.8 70.4C116.9 70.4 124.1 74.2 128.7 80.1C125.4 68.3 121.8 67 118 67Z" fill="white"/>
+  <path d="M139.8 77.5L143 87.1H153.1L144.9 92.9L148 102.5L139.8 96.8L131.6 102.5L134.7 92.9L126.5 87.1H136.6L139.8 77.5Z" fill="white"/>
+  <path d="M56 146.2L74.2 102H84.6L102.8 146.2H91.7L88 136.6H70.3L66.6 146.2H56ZM73.6 128.8H84.7L79.2 114.3L73.6 128.8Z" fill="white"/>
+  <path d="M106.7 146.2V102H126.8C135.4 102 140.9 106.4 140.9 113.3C140.9 117.6 138.5 121 134.4 122.7C140.1 124.2 143.2 128.1 143.2 133.7C143.2 141.5 137 146.2 127.1 146.2H106.7ZM116.2 119.6H125.4C129.3 119.6 131.5 117.8 131.5 114.5C131.5 111.2 129.3 109.5 125.4 109.5H116.2V119.6ZM116.2 138.4H126.2C130.6 138.4 133.1 136.5 133.1 132.8C133.1 129.1 130.6 127.1 126.2 127.1H116.2V138.4Z" fill="white"/>
+  <path d="M149.2 146.2V102H183V110.1H158.8V119.8H180.4V127.5H158.8V138.2H183.8V146.2H149.2Z" fill="white"/>
+  <text x="110" y="167" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="white">BAKIRKÖY ŞUBESİ</text>
+  <text x="110" y="184" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="white">Kamu Yararına Çalışan Dernek · 19 Mayıs 1989</text>
+</svg>
