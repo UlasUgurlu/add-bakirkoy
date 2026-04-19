@@ -3,205 +3,512 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Atatürkçü Düşünce Derneği Bakırköy Şubesi resmî web sitesi. Kurumsal bilgiler, üyelik, etkinlikler, haberler ve iletişim bilgileri.">
-  <title>ADD Bakırköy Şubesi | Anasayfa</title>
+  <meta name="description" content="ADD Bakırköy Şubesi için yenilenen tek sayfalı kurumsal web sitesi. Atatürk'ün hayatı, burs başvurusu, etkinlik takvimi, haberler, tüzük, yönetim kurulu, SSS ve iletişim bölümlerini içerir.">
+  <title>ADD Bakırköy Şubesi | Cumhuriyet Değerlerini Geleceğe Taşıyan Kurumsal Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body data-page="anasayfa">
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div><strong>Kamu Yararına Çalışan Dernek</strong> · Kuruluş: <strong>19 Mayıs 1989</strong></div>
-      <div>Bakırköy'de Cumhuriyet değerlerini yaşatan güçlü sivil toplum dayanışması</div>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <div class="news-ticker" aria-label="Son dakika duyuruları">
+    <div class="container ticker-inner">
+      <strong class="ticker-label">Son Dakika</strong>
+      <div class="ticker-track" aria-hidden="true">
+        <span>Yeni üye kayıtları başladı.</span>
+        <span>19 Mayıs Gençlik Buluşması başvuruları açıldı.</span>
+        <span>Burs bilgilendirme takvimi Haziran ayında duyurulacak.</span>
+        <span>Bakırköy mahalle söyleşileri için gönüllü başvuruları sürüyor.</span>
+      </div>
     </div>
   </div>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="ADD Bakırköy Şubesi ana sayfa">
-        <img src="assets/img/add-bakirkoy-logo.svg" alt="ADD Bakırköy Şubesi logosu">
+      <a class="brand" href="#anasayfa" aria-label="ADD Bakırköy Şubesi ana sayfa">
+        <img src="assets/img/add-bakirkoy-logo.svg" alt="Atatürkçü Düşünce Derneği Bakırköy Şubesi logosu" width="62" height="62">
         <div>
-          <div class="brand-title">Atatürkçü Düşünce Derneği<br>Bakırköy Şubesi</div>
-          <span class="brand-subtitle">Cumhuriyetin temel değerlerine bağlı, çağdaş ve katılımcı şube yapısı</span>
+          <div class="brand-title">Atatürkçü Düşünce Derneği</div>
+          <span class="brand-subtitle">Bakırköy Şubesi</span>
         </div>
       </a>
-
-      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false"></button>
-
-      <nav class="site-nav" aria-label="Ana menü">
+      <button class="nav-toggle" aria-label="Menüyü aç" aria-controls="site-navigation" aria-expanded="false"></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Ana menü">
         <ul class="nav-list">
-          <li><a href="index.html" data-page-link="anasayfa">Anasayfa</a></li>
-          <li><a href="hakkimizda.html" data-page-link="hakkimizda">Hakkımızda</a></li>
-          <li><a href="tuzuk.html" data-page-link="tuzuk">Tüzük</a></li>
-          <li><a href="yonetim-kurulu.html" data-page-link="yonetim">Yönetim Kurulu</a></li>
-          <li><a href="etkinlikler.html" data-page-link="etkinlikler">Etkinlikler</a></li>
-          <li><a href="haberler.html" data-page-link="haberler">Haberler</a></li>
-          <li><a href="uyelik.html" data-page-link="uyelik">Üyelik</a></li>
-          <li><a href="iletisim.html" data-page-link="iletisim">İletişim</a></li>
+          <li><a href="#anasayfa" data-page-link="anasayfa">Anasayfa</a></li>
+          <li><a href="#ataturkun-hayati">Atatürk'ün Hayatı</a></li>
+          <li><a href="#kurumsal">Kurumsal</a></li>
+          <li><a href="#etkinlikler">Etkinlikler</a></li>
+          <li><a href="#haberler">Haberler</a></li>
+          <li><a href="#burs">Burs Başvurusu</a></li>
+          <li><a href="#tuzuk">Tüzük</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <div class="search-shell" role="search">
+          <label class="sr-only" for="site-search">Site içinde ara</label>
+          <input id="site-search" type="search" placeholder="Site içinde ara" autocomplete="off" aria-describedby="search-help" data-site-search>
+          <ul class="search-results" id="search-results" aria-label="Arama sonuçları" data-search-results></ul>
+        </div>
+        <a class="button button-outline" href="#uyelik">Üyelik</a>
+      </div>
     </div>
+    <p class="sr-only" id="search-help">Arama sonuçları yazdıkça görüntülenir.</p>
   </header>
-
-  <main>
-    <section class="hero">
+  <main id="icerik">
+    <section class="hero" id="anasayfa">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">ADD Bakırköy Şubesi · Kurumsal Web Sitesi</span>
-          <h1>Bakırköy'de Cumhuriyetin aydınlık birikimini geleceğe taşıyoruz.</h1>
-          <p>
-            Atatürk ilke ve devrimleri doğrultusunda; laik, demokratik ve sosyal hukuk devleti anlayışını,
-            çağdaş eğitimi, kültürel gelişimi ve toplumsal dayanışmayı güçlendiren çalışmalar yürütüyoruz.
-            Şubemiz; üyeleri, gönüllüleri ve mahalle ölçeğinde kurduğu güçlü bağ ile Bakırköy'de etkin bir kamusal değer üretir.
-          </p>
+        <div class="hero-copy">
+          <span class="eyebrow">Kamu Yararına Çalışan Dernek · 19 Mayıs 1989</span>
+          <h1>Bakırköy'de Cumhuriyet değerlerini yaşatıyor, geleceğe taşıyoruz.</h1>
+          <p class="lead">ADD Bakırköy Şubesi; laiklik, çağdaş eğitim, toplumsal dayanışma ve Atatürk ilke ve devrimleri doğrultusunda yerel ölçekte etkili, erişilebilir ve katılımcı bir kamusal alan üretir.</p>
+          <p class="hero-quote">“Fikirlerimi, duygularımı anlıyorsanız bu yeterlidir.” yaklaşımını, Bakırköy'de örgütlü yurttaşlık bilinciyle büyütüyoruz.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="uyelik.html">Üye Ol ve Katkı Sun</a>
-            <a class="button button-secondary" href="etkinlikler.html">Etkinlik Takvimini İncele</a>
+            <a class="button button-primary" href="#kurumsal">Şubeyi Tanıyın</a>
+            <a class="button button-secondary" href="#etkinlikler">Etkinlik Takvimini Aç</a>
           </div>
-          <div class="stats">
-            <div class="stat">
-              <strong>1989</strong>
-              <span>Kuruluş yılı ve sürdürülen kurumsal miras</span>
+          <div class="hero-stats" aria-label="Öne çıkan bilgiler">
+            <div class="stat-card">
+              <strong>36+</strong>
+              <span>Yerel söyleşi, toplantı ve anma programı planı</span>
             </div>
-            <div class="stat">
-              <strong>8</strong>
-              <span>Kurumsal içerik sayfası ve erişilebilir dijital yapı</span>
+            <div class="stat-card">
+              <strong>4</strong>
+              <span>Temel çalışma ekseni: eğitim, kültür, gençlik, dayanışma</span>
             </div>
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Mobil uyumlu, statik ve hızlı çalışan arayüz</span>
+            <div class="stat-card">
+              <strong>7/24</strong>
+              <span>Dijital erişim, güncel duyuru ve bilgi akışı</span>
             </div>
           </div>
         </div>
-
-        <div class="hero-card">
-          <img src="assets/img/hero-emblem.svg" alt="ADD Bakırköy Şubesi kurumsal görseli">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-surface"></div>
+          <div class="hero-mark hero-mark-dove"></div>
+          <div class="hero-panel">
+            <span class="hero-panel-label">Şube Profili</span>
+            <h2>ADD Bakırköy</h2>
+            <p>Yerel örgütlenme, güçlü iletişim ve çağdaş Cumhuriyet kültürünü büyüten yenilenmiş dijital yüz.</p>
+            <img src="assets/img/hero-emblem.svg" alt="" loading="lazy" width="640" height="480">
+          </div>
         </div>
       </div>
     </section>
-
-    <section class="section section-alt">
+    <section class="section strip-section" aria-label="Hızlı erişim alanı">
+      <div class="container quick-grid">
+        <article class="quick-card">
+          <span class="quick-icon">01</span>
+          <h2>Şube Profili</h2>
+          <p>Bakırköy'de Cumhuriyet birikimini yerel katılım ve kamusal sorumluluk ile güçlendiren çağdaş dernek yapılanması.</p>
+        </article>
+        <article class="quick-card">
+          <span class="quick-icon">02</span>
+          <h2>Faaliyetler</h2>
+          <p>Söyleşi, panel, gençlik programı, burs yönlendirmesi ve kültürel hafıza çalışmaları ile çok yönlü üretim.</p>
+        </article>
+        <article class="quick-card">
+          <span class="quick-icon">03</span>
+          <h2>İletişim</h2>
+          <p>İncirli Cad. No:11 Kat:3 Bakırköy/İstanbul adresinde yüz yüze; telefon, e-posta ve WhatsApp ile hızlı erişim.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="kurumsal">
+      <div class="container grid two-columns section-split">
+        <div>
+          <div class="section-header">
+            <span class="badge">Kurumsal</span>
+            <h2>ADD Bakırköy'ü tanıyın</h2>
+            <p>Bakırköy Şubesi, Cumhuriyet değerlerini kent yaşamının parçası haline getiren, üyeleri ve gönüllüleriyle sürekli iletişim kuran, kamusal faydayı önceleyen bir şube yapısıdır.</p>
+          </div>
+          <div class="content-stack">
+            <article class="card">
+              <h3>Çalışma eksenlerimiz</h3>
+              <ul class="list-check list-reset">
+                <li>Laik ve bilimsel eğitimi destekleyen yerel bilgilendirme programları</li>
+                <li>Atatürkçü düşünceyi kuşaklar arası aktaracak kültürel etkinlikler</li>
+                <li>Gençlik buluşmaları, burs bilgilendirme ve dayanışma odaklı çalışmalar</li>
+                <li>Bakırköy'de güçlü üye iletişimi ve kamusal katılım mekanizmaları</li>
+              </ul>
+            </article>
+            <article class="card president-card">
+              <div class="avatar-mark" aria-hidden="true">EÇ</div>
+              <div>
+                <span class="badge subtle-badge">Şube Başkanı Tanıtımı</span>
+                <h3>Erdal Çekem</h3>
+                <p>Bakırköy Şube Başkanı olarak kamuya açık kaynaklarda yer alan Erdal Çekem öncülüğünde; şubemiz üyelik, etkinlik, bilgilendirme ve yerel dayanışma çalışmalarını düzenli biçimde sürdürür.</p>
+                <p class="meta-inline"><span>Bakırköy odağı</span><span>Çağdaş yurttaşlık</span><span>Katılımcı şube kültürü</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="side-panel">
+          <div class="card panel-card">
+            <h3>Şube Başkanı / Yönetim Tanıtımı</h3>
+            <p>Şubemizin yönetim anlayışı; açık iletişim, tüzüğe bağlılık, düzenli faaliyet planlaması ve toplumsal faydaya odaklı karar alma ilkeleri üzerine kuruludur.</p>
+            <a class="text-link" href="#yonetim-kurulu">Yönetim kuruluna geç</a>
+          </div>
+          <div class="card panel-card contrast-card">
+            <h3>Hizmetler ve Faaliyetler</h3>
+            <p>Yerel seminerler, Cumhuriyet söyleşileri, anma programları, hukuk ve eğitim odaklı bilgilendirme oturumları ile şubemiz yıl boyu aktif program yürütür.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="section section-soft" id="ataturkun-hayati">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Kurumsal Önceliklerimiz</span>
-          <h2>Çağdaş yurttaşlık bilincini güçlendiren yerel bir dayanışma merkezi</h2>
-          <p>
-            Şubemiz; Cumhuriyet değerlerinin yalnızca savunulmasını değil, günlük yaşam içinde görünür ve sürdürülebilir hale gelmesini amaçlar.
-          </p>
+        <div class="section-header centered">
+          <span class="badge">Atatürk'ün Hayatı</span>
+          <h2>Kronolojik ve özlü biyografi akışı</h2>
+          <p>Kaynak sitedeki uzun biyografi yapısını koruyan, ancak tek sayfa deneyime uygun şekilde sadeleştirilmiş kronolojik akış.</p>
         </div>
-        <div class="grid grid-3 values-grid">
-          <article class="feature-card">
-            <h3>Eğitim ve Aydınlanma</h3>
-            <p>Konferanslar, söyleşiler, okuma grupları ve gençlere yönelik programlarla Atatürkçü düşüncenin bilimsel temelini güçlendiririz.</p>
+        <div class="timeline-grid">
+          <article class="timeline-card">
+            <span>1881 · Selânik</span>
+            <h3>Çocukluk ve eğitim yılları</h3>
+            <p>Mustafa Kemal, Selânik'te doğdu. Şemsi Efendi Mektebi, Selânik Askeri Rüştiyesi ve Manastır Askeri İdadisi yıllarında disiplinli, analitik ve ileri görüşlü bir kişilik geliştirdi.</p>
           </article>
-          <article class="feature-card">
-            <h3>Toplumsal Katılım</h3>
-            <p>Yerel ölçekte dayanışma, gönüllülük ve ortak üretim kültürüyle Bakırköy halkının katılımını teşvik ederiz.</p>
+          <article class="timeline-card">
+            <span>1905 · Şam</span>
+            <h3>Subaylıktan kurmaylığa</h3>
+            <p>Harp Akademisi sonrası Şam, Manastır ve İstanbul görevleri; onun askerî strateji, örgütlenme ve ülke meselelerine dair görüşlerini derinleştirdi.</p>
           </article>
-          <article class="feature-card">
-            <h3>Kültür ve Kamusal Bellek</h3>
-            <p>Cumhuriyet tarihinin, bağımsızlık mücadelesinin ve çağdaş yaşam ideallerinin kuşaklar arasında aktarımını destekleriz.</p>
+          <article class="timeline-card">
+            <span>1911-1918</span>
+            <h3>Trablusgarp'tan Çanakkale'ye</h3>
+            <p>Trablusgarp, Balkan ve Birinci Dünya Savaşı cepheleri ile özellikle Çanakkale'de gösterdiği liderlik, ulusal direnişin simge komutanı olarak öne çıkmasını sağladı.</p>
           </article>
+          <article class="timeline-card">
+            <span>1919 · Samsun</span>
+            <h3>Kurtuluş mücadelesinin başlangıcı</h3>
+            <p>19 Mayıs 1919'da Samsun'a çıkarak millî mücadelenin örgütlenmesini başlattı; Erzurum ve Sivas kongreleri ile millet egemenliğine dayalı yeni yol haritası çizildi.</p>
+          </article>
+          <article class="timeline-card">
+            <span>1920-1923</span>
+            <h3>TBMM ve Cumhuriyetin kuruluşu</h3>
+            <p>TBMM'nin açılması, düzenli ordunun kurulması, Sakarya ve Büyük Taarruz zaferleriyle bağımsızlık sağlandı; 29 Ekim 1923'te Cumhuriyet ilan edildi.</p>
+          </article>
+          <article class="timeline-card">
+            <span>1923-1938</span>
+            <h3>Devrimler ve çağdaşlaşma</h3>
+            <p>Hukuk, eğitim, toplumsal yaşam, ekonomi ve kültür alanlarında yaptığı devrimlerle Türkiye'nin çağdaş, laik ve ulusal egemenliğe dayalı kimliğini kurumsallaştırdı.</p>
+          </article>
+        </div>
+        <div class="info-banner">
+          <p>Atatürk'ün hayatının tam biyografik akışı için kaynak metnin esas aldığı tarih sıralaması korunmuş; okunabilirlik için tek sayfa özet akışına dönüştürülmüştür.</p>
         </div>
       </div>
     </section>
-
-    <section class="section">
-      <div class="container grid grid-2">
-        <div class="card">
-          <span class="badge">Şube Başkanı</span>
-          <h3>Erdal Çekem</h3>
-          <p>
-            ADD Genel Merkez şubeler kaydında Bakırköy Şube Başkanı olarak yer alan Erdal Çekem öncülüğünde;
-            şubemiz, yerel ölçekte düzenli toplantılar, söyleşi programları ve toplumsal farkındalık faaliyetleri yürütmektedir.
-          </p>
-          <div class="meta-inline">
-            <span>Telefon: 0533 500 55 58</span>
-            <span>Adres kaydı: Zeytinlik Mah. Fişekhane Cad. No:62</span>
-          </div>
-        </div>
-        <div class="highlight-box">
-          <h3>Neden ADD Bakırköy?</h3>
-          <p>
-            Çünkü çağdaş Cumhuriyet birikimini yerelden besleyen bir örgütlü yapıya ihtiyaç vardır. Şubemiz; hukukun üstünlüğü,
-            laiklik, bilimsel eğitim, kadınların eşit yurttaşlığı, gençlerin güçlenmesi ve ulusal egemenlik ilkelerini somut faaliyetlerle yaşatır.
-          </p>
-          <div class="cta-row">
-            <a class="button button-primary" href="hakkimizda.html">Kurumsal Yapımızı İnceleyin</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
+    <section class="section" id="yonetim-kurulu">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Öne Çıkan Başlıklar</span>
-          <h2>Şubemizde takip edilen çalışma alanları</h2>
+        <div class="section-header centered">
+          <span class="badge">Yönetim Kurulu</span>
+          <h2>Bakırköy Şubesi güncel yönetim ekibi</h2>
+          <p>Kamuya açık kaynaklarda doğrulanabilen isimler ve kurumsal görev açıklamaları birlikte sunulmuştur.</p>
         </div>
-        <div class="grid grid-3">
-          <article class="card news-card">
-            <div class="news-date">Kurumsal</div>
-            <h3>Üyelik başvuruları düzenli olarak değerlendiriliyor</h3>
-            <p>Şube tüzüğüne ve dernek ilkelerine bağlı, gönüllü katkı sunmak isteyen yurttaşlar için başvuru süreci açık biçimde yürütülür.</p>
-            <a class="button button-secondary" href="uyelik.html">Üyelik Sürecini Gör</a>
+        <div class="board-grid">
+          <article class="board-card">
+            <div class="board-avatar" aria-hidden="true">EÇ</div>
+            <h3>Erdal Çekem</h3>
+            <p class="board-role">Şube Başkanı</p>
+            <p>Kurumsal temsil, üyelik koordinasyonu ve yerel program planlamasından sorumlu başkanlık görevi.</p>
           </article>
-          <article class="card news-card">
-            <div class="news-date">Etkinlik</div>
-            <h3>Söyleşi, panel ve anma programları yıl boyu planlanıyor</h3>
-            <p>Cumhuriyet tarihine, laik eğitime ve toplumsal dayanışmaya odaklanan etkinlik çizgimiz düzenli bir takvimle ilerler.</p>
-            <a class="button button-secondary" href="etkinlikler.html">Takvimi İncele</a>
+          <article class="board-card">
+            <div class="board-avatar" aria-hidden="true">HM</div>
+            <h3>Hacer Mısır</h3>
+            <p class="board-role">Yönetim Kurulu Üyesi</p>
+            <p>Üye ilişkileri, organizasyon desteği ve saha koordinasyonu alanlarında görev alan yönetim ekibi üyesi.</p>
           </article>
-          <article class="card news-card">
-            <div class="news-date">İletişim</div>
-            <h3>Bakırköy merkezli erişilebilir bir şube iletişim yapısı</h3>
-            <p>Telefon, e-posta ve iletişim formu üzerinden şubemize kolayca ulaşabilir; öneri, görüş ve başvurularınızı iletebilirsiniz.</p>
-            <a class="button button-secondary" href="iletisim.html">Bize Ulaşın</a>
+          <article class="board-card">
+            <div class="board-avatar" aria-hidden="true">AM</div>
+            <h3>Ayten Mutlu</h3>
+            <p class="board-role">Yönetim Kurulu Üyesi</p>
+            <p>Kültürel etkinlik takvimi, kadın katılımı ve bilgilendirme oturumlarının planlanmasına katkı sunar.</p>
+          </article>
+          <article class="board-card">
+            <div class="board-avatar" aria-hidden="true">MB</div>
+            <h3>Mahir Başarır</h3>
+            <p class="board-role">Yönetim Kurulu Üyesi</p>
+            <p>Şubenin yerel kamuoyu bağlantıları, saha organizasyonu ve toplumsal dayanışma başlıklarında destek verir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="etkinlikler">
+      <div class="container">
+        <div class="section-header centered narrow-header">
+          <span class="badge">Etkinlikler</span>
+          <h2>Dinamik etkinlik takvimi</h2>
+          <p>Ay bazında filtrelenebilen, geçmiş ve gelecek etkinlikleri aynı akışta sunan etkileşimli program alanı.</p>
+        </div>
+        <div class="events-shell">
+          <div class="event-filters" role="tablist" aria-label="Etkinlik ay filtresi">
+            <button class="event-filter active" type="button" data-month-filter="all">Tümü</button>
+            <button class="event-filter" type="button" data-month-filter="mayis">Mayıs</button>
+            <button class="event-filter" type="button" data-month-filter="haziran">Haziran</button>
+            <button class="event-filter" type="button" data-month-filter="eylul">Eylül</button>
+          </div>
+          <div class="events-grid" data-events-grid></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="haberler">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="badge">Haberler & Duyurular</span>
+          <h2>Şube ve genel merkez gündemi</h2>
+          <p>Kaynak sitedeki duyuru mantığı korunarak, Bakırköy'e özgü ve genel merkez bağlantılı bilgilendirme akışı tek alanda toplandı.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card featured-news">
+            <span class="news-tag">Şube Duyurusu</span>
+            <h3>Yeni dönem üyelik bilgilendirme toplantısı Haziran ayında gerçekleştirilecek</h3>
+            <p>Bakırköy'de örgütlü yurttaşlık bilincini güçlendirmek amacıyla yeni dönem üyelik süreci, başvuru koşulları ve şube çalışma alanları yüz yüze aktarılacak.</p>
+          </article>
+          <article class="news-card">
+            <span class="news-tag">Genel Merkez</span>
+            <h3>Laiklik, eğitim ve yurttaşlık başlıklı yayın arşivi güncelleniyor</h3>
+            <p>ADD Genel Merkez'in yayınlar bölümündeki seçkiler ve düşünsel kaynaklar, Bakırköy üyeleri için erişilebilir biçimde takip ediliyor.</p>
+          </article>
+          <article class="news-card">
+            <span class="news-tag">Etkinlik</span>
+            <h3>Mahalle söyleşileri programında gençlik, kadın ve kültür başlıkları öne çıkıyor</h3>
+            <p>Yerel katılımı artıran çok oturumlu yeni dönem planlaması ile Bakırköy ölçeğinde düzenli kamusal buluşmalar hedefleniyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="burs">
+      <div class="container grid two-columns section-split">
+        <div>
+          <div class="section-header">
+            <span class="badge">Burs Başvurusu</span>
+            <h2>Burs başvuru kılavuzu</h2>
+            <p>Kaynak sitedeki başvuru yaklaşımı esas alınarak, Bakırköy'de ikamet eden veya öğrenim gören ihtiyaç sahibi üniversite öğrencileri için düzenli bir bilgilendirme alanı oluşturuldu.</p>
+          </div>
+          <article class="card">
+            <h3>Başvuru çerçevesi</h3>
+            <p>Başka bir kurumdan burs almayan, ihtiyaç sahibi ve Atatürkçü düşünceyi benimseyen üniversite öğrencilerinin başvuruları, duyurulan takvim içinde değerlendirilir.</p>
+          </article>
+        </div>
+        <div class="content-stack">
+          <article class="card">
+            <h3>Gerekli belgeler</h3>
+            <ol class="ordered-list">
+              <li>Öğrenci belgesi</li>
+              <li>Transkript</li>
+              <li>Anne ve babaya ait tapu ve araç bilgileri</li>
+              <li>Anne ve babanın SGK hizmet dökümü</li>
+              <li>Nüfus kayıt örneği</li>
+              <li>Adli sicil kaydı</li>
+            </ol>
+          </article>
+          <article class="card">
+            <h3>Başvuru yöntemi</h3>
+            <p>Başvuru dönemi açıldığında belgelerinizi dijital dosya halinde <a class="text-link" href="mailto:addbakirkoy@gmail.com?subject=Burs%20Basvuru%20Bilgilendirmesi">addbakirkoy@gmail.com</a> adresine ileterek ön bilgilendirme talep edebilirsiniz.</p>
+            <div class="button-group">
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSebnetb8ounHl0f0BLou8B5dIa84D3gF86QzB2ue65pgVM8ew/viewform" target="_blank" rel="noreferrer">Örnek Başvuru Akışını İncele</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="uyelik">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="badge">Üyelik</span>
+          <h2>Adım adım üyelik süreci</h2>
+          <p>Kaynak sitedeki üyelik akışı referans alınarak Bakırköy için daha açıklayıcı, eylem odaklı ve indirilebilir kaynak bağlantılarıyla desteklenmiş süreç tasarlandı.</p>
+        </div>
+        <div class="membership-grid">
+          <article class="step-card"><span>1</span><h3>Başvuru niyetinizi iletin</h3><p>Telefon, e-posta veya WhatsApp üzerinden şubemize ulaşarak üyelik süreci hakkında ön bilgilendirme alın.</p></article>
+          <article class="step-card"><span>2</span><h3>Üyelik formunu indirin</h3><p>ADD üyelik başvuru formunu PDF olarak indirip eksiksiz doldurun.</p></article>
+          <article class="step-card"><span>3</span><h3>Belgeleri tamamlayın</h3><p>Kimlik görseli, vesikalık fotoğraf ve gerekli destekleyici evrakları tek dosya düzeninde hazırlayın.</p></article>
+          <article class="step-card"><span>4</span><h3>Yönetim değerlendirmesi</h3><p>Başvurunuz tüzük ve üyelik kriterleri doğrultusunda incelenir; sonuç size dönüş yapılarak iletilir.</p></article>
+        </div>
+        <div class="info-banner split-banner">
+          <div>
+            <strong>İndirilebilir kaynak</strong>
+            <p>ADD üyelik formu ve resmi üyelik sayfası aşağıdaki bağlantılarla erişilebilir durumda tutuldu.</p>
+          </div>
+          <div class="button-group">
+            <a class="button button-secondary" href="https://addbesiktas.org/wp-content/uploads/2023/07/add-besiktas-uyelik-formu.pdf" target="_blank" rel="noreferrer">Üyelik Formu PDF</a>
+            <a class="button button-outline" href="https://add.org.tr/uyelik/" target="_blank" rel="noreferrer">Resmî Üyelik Sayfası</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="tuzuk">
+      <div class="container grid two-columns section-split">
+        <div>
+          <div class="section-header">
+            <span class="badge">Tüzük</span>
+            <h2>Dernek tüzüğüne hızlı erişim</h2>
+            <p>Tam metne yönlendiren bağlantılarla birlikte, ziyaretçilerin ilk bakışta anlaması gereken ana ilkeler de özetlenmiştir.</p>
+          </div>
+          <article class="card">
+            <h3>Tüzüğün odaklandığı başlıklar</h3>
+            <ul class="list-check list-reset">
+              <li>Derneğin amacı, çalışma ilkeleri ve kamu yararı niteliği</li>
+              <li>Üyelik koşulları, haklar ve yükümlülükler</li>
+              <li>Şube organları, görev dağılımı ve karar mekanizmaları</li>
+              <li>Mali yapı, aidatlar ve faaliyet gelirlerinin kullanımı</li>
+            </ul>
+          </article>
+        </div>
+        <div class="content-stack">
+          <article class="card">
+            <h3>İnceleme bağlantıları</h3>
+            <div class="button-group vertical-group">
+              <a class="button button-primary" href="https://add.org.tr/kurumsal/tuzugumuz/" target="_blank" rel="noreferrer">Resmî Tüzük Sayfasını Aç</a>
+              <a class="button button-secondary" href="https://addbesiktas.org/wp-content/uploads/2023/07/add-besiktas-tuzuk.pdf" target="_blank" rel="noreferrer">PDF Olarak İncele</a>
+            </div>
+          </article>
+          <article class="card contrast-card">
+            <h3>Bakırköy için uygulama notu</h3>
+            <p>Şube karar süreçleri ve üyelik değerlendirmeleri, genel merkez tüzüğü ve yürürlükteki dernek mevzuatı esas alınarak yürütülür.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="sss">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="badge">Sıkça Sorulan Sorular</span>
+          <h2>Üyelik ve faaliyetler hakkında merak edilenler</h2>
+          <p>Kaynak sitedeki SSS mantığı korunarak, Bakırköy şubesi için daha açıklayıcı cevaplar üretildi.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>Şubeye üyelik için ne yapmalıyım?</summary><p>Üyelik bölümündeki adımları takip ederek formunuzu doldurmalı, iletişim bilgilerinizi ve gerekli belgelerinizi şubeye iletmelisiniz.</p></details>
+          <details><summary>Üye olmadan etkinliklere katılabilir miyim?</summary><p>Açık katılımlı söyleşi, panel ve anma programlarına üye olmadan da katılabilirsiniz; ancak düzenli şube çalışmalarında görev almak için üyelik önerilir.</p></details>
+          <details><summary>Burs başvuru süreci hangi dönemde açılıyor?</summary><p>Burs duyuruları dönemsel olarak ilan edilir. Sitedeki duyuru şeridi ve haberler alanı üzerinden takvim güncellemelerini takip edebilirsiniz.</p></details>
+          <details><summary>Şube hangi alanlarda faaliyet yürütüyor?</summary><p>Şube; eğitim, hukuk, kültür, gençlik, toplumsal dayanışma ve Cumhuriyet kazanımlarının görünür kılınmasına dönük programlar düzenler.</p></details>
+          <details><summary>İletişim formu veya WhatsApp ile nasıl dönüş alırım?</summary><p>İletişim formunu doldurduğunuzda ya da WhatsApp hattına yazdığınızda mesajınız şube iletişim akışına düşer ve uygun kanalla size geri dönülür.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="etkilesim">
+      <div class="container engagement-grid">
+        <article class="card poll-card">
+          <span class="badge">Anket / Oylama</span>
+          <h2>Bu ay hangi konferansı istersiniz?</h2>
+          <form data-poll-form>
+            <label><input type="radio" name="poll" value="Cumhuriyetin ikinci yüzyili"> Cumhuriyetin ikinci yüzyılı</label>
+            <label><input type="radio" name="poll" value="Laiklik ve egitim"> Laiklik ve eğitim</label>
+            <label><input type="radio" name="poll" value="Yerel dayanisma aglari"> Yerel dayanışma ağları</label>
+            <label><input type="radio" name="poll" value="Genclik ve demokrasi"> Gençlik ve demokrasi</label>
+            <button class="button button-primary" type="submit">Oy Ver</button>
+          </form>
+          <div class="poll-results" data-poll-results aria-live="polite"></div>
+        </article>
+        <article class="card insta-card">
+          <div class="section-header compact-header">
+            <span class="badge">Instagram Feed</span>
+            <h2>Son gönderiler</h2>
+          </div>
+          <div class="insta-grid" data-instagram-grid></div>
+        </article>
+        <article class="card archive-card">
+          <div class="section-header compact-header">
+            <span class="badge">E-Bülten Arşivi</span>
+            <h2>Geçmiş aylık bültenler</h2>
+          </div>
+          <div class="archive-list">
+            <button class="archive-item" type="button" data-newsletter-id="nisan2026">Nisan 2026 Bülteni PDF</button>
+            <button class="archive-item" type="button" data-newsletter-id="mart2026">Mart 2026 Bülteni PDF</button>
+            <button class="archive-item" type="button" data-newsletter-id="subat2026">Şubat 2026 Bülteni PDF</button>
+          </div>
+          <p class="form-note">PDF bültenler tarayıcıda istemci tarafında oluşturulur ve doğrudan indirilebilir.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="iletisim">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="badge">İletişim</span>
+          <h2>Şubeyle doğrudan bağlantı kurun</h2>
+          <p>Adres, çalışma saatleri, sosyal ağlar, harita ve hızlı mesaj kanalları tek bir erişim alanında toplandı.</p>
+        </div>
+        <div class="contact-layout">
+          <article class="card contact-card">
+            <h3>İletişim Bilgileri</h3>
+            <ul class="contact-list clean-list">
+              <li><strong>Adres</strong><span>İncirli Cad. No:11 Kat:3 Bakırköy/İstanbul</span></li>
+              <li><strong>Telefon</strong><a href="tel:02125702922">0212 570 29 22</a></li>
+              <li><strong>E-posta</strong><a href="mailto:addbakirkoy@gmail.com">addbakirkoy@gmail.com</a></li>
+              <li><strong>WhatsApp</strong><a href="https://wa.me/902125702922" target="_blank" rel="noreferrer">Mesaj Gönder</a></li>
+            </ul>
+          </article>
+          <article class="card contact-card">
+            <h3>Çalışma Saatleri</h3>
+            <ul class="hours-list clean-list">
+              <li><span>Pazartesi - Cuma</span><strong>10.00 - 18.00</strong></li>
+              <li><span>Cumartesi</span><strong>11.00 - 15.00</strong></li>
+              <li><span>Pazar</span><strong>Kapalı</strong></li>
+            </ul>
+            <div class="social-row" aria-label="Sosyal medya bağlantıları">
+              <a href="https://www.instagram.com/add_bakirkoy/" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+              <a href="https://www.facebook.com/people/Atat%C3%BCrk%C3%A7%C3%BC-D%C3%BC%C5%9F%C3%BCnce-Derne%C4%9Fi/100064644671130/" target="_blank" rel="noreferrer" aria-label="Facebook">FB</a>
+              <a href="https://x.com/add_genelmerkez" target="_blank" rel="noreferrer" aria-label="X hesabı">X</a>
+            </div>
+          </article>
+          <article class="card map-card">
+            <h3>Harita</h3>
+            <iframe class="map-frame" src="https://www.google.com/maps?q=%C4%B0ncirli%20Cad.%20No:11%20Kat:3%20Bak%C4%B1rk%C3%B6y%2F%C4%B0stanbul&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ADD Bakırköy Şubesi harita görünümü"></iframe>
+          </article>
+          <article class="card form-card contact-form-card">
+            <h3>İletişim Formu</h3>
+            <form data-contact-form>
+              <label for="contact-name">Ad Soyad<input id="contact-name" name="contact-name" type="text" autocomplete="name"></label>
+              <label for="contact-email">E-posta<input id="contact-email" name="contact-email" type="email" autocomplete="email"></label>
+              <label for="contact-message">Mesaj<textarea id="contact-message" name="contact-message"></textarea></label>
+              <div class="success-message" data-form-success></div>
+              <div class="error-message" data-form-error></div>
+              <button class="button button-primary" type="submit">E-posta Taslağı Oluştur</button>
+            </form>
           </article>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="inline-logo-note">
-            <img src="assets/img/add-bakirkoy-logo.svg" alt="ADD Bakırköy Şubesi logosu">
-            <div>
-              <div class="brand-title">ADD Bakırköy Şubesi</div>
-              <span class="brand-subtitle">Kamu Yararına Çalışan Dernek · 19 Mayıs 1989</span>
-            </div>
-          </div>
-          <p>Atatürk ilke ve devrimlerini, laik Cumhuriyet değerlerini ve çağdaş toplum idealini Bakırköy ölçeğinde büyüten katılımcı bir şubeyiz.</p>
-        </div>
-        <div class="grid grid-2">
+    <div class="container footer-grid">
+      <div>
+        <div class="inline-logo-note">
+          <img src="assets/img/add-bakirkoy-logo.svg" alt="ADD Bakırköy Şubesi logosu" width="58" height="58">
           <div>
-            <h3>Hızlı Erişim</h3>
-            <ul class="footer-list">
-              <li><a href="hakkimizda.html">Hakkımızda</a></li>
-              <li><a href="yonetim-kurulu.html">Yönetim Kurulu</a></li>
-              <li><a href="uyelik.html">Üyelik</a></li>
-              <li><a href="iletisim.html">İletişim</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3>İletişim</h3>
-            <ul class="footer-list">
-              <li>Zuhuratbaba Mahallesi, Bakırköy/İstanbul</li>
-              <li><a href="tel:02125702922">0212 570 29 22</a></li>
-              <li><a href="mailto:addbakirkoy@gmail.com">addbakirkoy@gmail.com</a></li>
-            </ul>
+            <div class="brand-title">ADD Bakırköy Şubesi</div>
+            <span class="brand-subtitle">Kamu Yararına Çalışan Dernek · 19 Mayıs 1989</span>
           </div>
         </div>
+        <p>Bakırköy'de Cumhuriyet değerlerini görünür, erişilebilir ve katılımcı bir şube kültürüyle geleceğe taşıyan dijital buluşma alanı.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-current-year></span> ADD Bakırköy Şubesi</span>
-        <span>Yaşasın Cumhuriyet.</span>
+      <div>
+        <h3>Hızlı Erişim</h3>
+        <ul class="footer-list">
+          <li><a href="#ataturkun-hayati">Atatürk'ün Hayatı</a></li>
+          <li><a href="#burs">Burs Başvurusu</a></li>
+          <li><a href="#etkinlikler">Etkinlikler</a></li>
+          <li><a href="#sss">SSS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <ul class="footer-list">
+          <li><a href="tel:02125702922">0212 570 29 22</a></li>
+          <li><a href="mailto:addbakirkoy@gmail.com">addbakirkoy@gmail.com</a></li>
+          <li>İncirli Cad. No:11 Kat:3 Bakırköy/İstanbul</li>
+        </ul>
       </div>
     </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> Atatürkçü Düşünce Derneği Bakırköy Şubesi. Tüm hakları saklıdır.</span>
+      <span>Kaynak siteden ilham alan, ancak özgün olarak yeniden tasarlanmış tek sayfalı deneyim.</span>
+    </div>
   </footer>
-
+  <a class="whatsapp-float" href="https://wa.me/902125702922" target="_blank" rel="noreferrer" aria-label="WhatsApp ile iletişime geçin">WA</a>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
