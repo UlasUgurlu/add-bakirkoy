@@ -2283,3 +2283,164 @@ select:focus {
     font-size: 2.1rem;
   }
 }
+
+/* ¦¦ Animated Counters ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+.counters-section {
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  padding: 3rem 0;
+}
+
+.counters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.counter-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.8rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+
+.counter-value {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.counter-card span {
+  color: rgba(255,255,255,0.76);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ¦¦ Genclik Kollari ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+.genclik-layout {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.genclik-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.genclik-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ¦¦ Donation / Burs Fonu ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+.donation-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.donation-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.2rem 0 0.8rem;
+}
+
+.donation-btn {
+  padding: 0.82rem 1.2rem;
+  border: 2px solid rgba(239,33,33,0.3);
+  border-radius: 999px;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.donation-btn:hover,
+.donation-btn.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.donation-custom { margin-bottom: 1rem; }
+.donation-custom input { max-width: 260px; }
+
+.donation-info-card {
+  background: linear-gradient(160deg, rgba(8,67,115,0.06), rgba(239,33,33,0.07));
+}
+
+/* ¦¦ ADD TV Card ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+.addtv-list { display: grid; gap: 0.8rem; }
+
+.addtv-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.addtv-item:hover {
+  background: var(--navy-soft);
+  transform: translateX(4px);
+}
+
+.addtv-thumb {
+  display: inline-grid;
+  place-items: center;
+  min-width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--navy));
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.addtv-info strong { display: block; color: var(--navy); font-size: 0.93rem; font-weight: 700; }
+.addtv-info span   { color: var(--muted); font-size: 0.87rem; }
+
+/* ¦¦ Engagement grid: 2x2 ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+.engagement-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ¦¦ Responsive for new sections ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+@media (max-width: 1180px) {
+  .counters-grid   { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .donation-grid   { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .genclik-card    { grid-template-columns: 1fr; }
+  .genclik-icon    { display: none; }
+}
+
+@media (max-width: 640px) {
+  .counters-grid   { grid-template-columns: 1fr 1fr; }
+  .donation-amounts { flex-direction: column; }
+  .donation-btn    { width: 100%; }
+}

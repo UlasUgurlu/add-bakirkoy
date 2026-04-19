@@ -331,6 +331,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ── Animated counters ──────────────────────────────────────
+  const counterCards = document.querySelectorAll("[data-counter]");
+  if (counterCards.length && "IntersectionObserver" in window) {
+    const animateCounter = (el) => {
+      const target = parseInt(el.dataset.counter, 10);
+      const suffix = el.dataset.suffix || "";
+      const valueEl = el.querySelector("[data-counter-value]");
+      if (!valueEl) return;
+      const steps = 60;
+      const duration = 1800;
+      let step = 0;
+      const timer = setInterval(() => {
+        step++;
+        const current = Math.min(Math.round((target / steps) * step), target);
+        valueEl.textContent = current.toLocaleString("tr-TR") + suffix;
+        if (step >= steps) clearInterval(timer);
+      }, duration / steps);
+    };
+
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    counterCards.forEach((card) => counterObserver.observe(card));
+  }
+
+  // ── Donation amount picker ──────────────────────────────────
+  const donationBtns = document.querySelectorAll(".donation-btn");
+  const donationLink = document.getElementById("donation-link");
+  const donationInput = document.querySelector("[data-donation-input]");
+
+  const updateDonationLink = (amount) => {
+    if (!donationLink) return;
+    const subject = encodeURIComponent("ADD Bakirkoy Burs Fonu Bagisi - " + (amount ? "\u20ba" + amount : "Belirtilmemis"));
+    const body = encodeURIComponent("Merhaba,\n\nBurs fonunuza \u20ba" + (amount || "?") + " tutarinda bagis yapmak istiyorum.\n\nLutfen odeme bilgilerini iletiniz.\n\nSaygılarımla.");
+    donationLink.href = "mailto:addbakirkoy@gmail.com?subject=" + subject + "&body=" + body;
+  };
+
+  donationBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      donationBtns.forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      if (donationInput) donationInput.value = "";
+      updateDonationLink(btn.dataset.amount);
+    });
+  });
+
+  if (donationInput) {
+    donationInput.addEventListener("input", () => {
+      donationBtns.forEach((b) => b.classList.remove("selected"));
+      updateDonationLink(donationInput.value || "?");
+    });
+  }
+
   if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
